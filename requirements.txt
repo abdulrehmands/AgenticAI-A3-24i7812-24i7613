@@ -1,0 +1,8 @@
+requests>=2.31.0
+python-dotenv>=1.0.0
+redis>=5.0.0
+openai>=1.40.0
+sendgrid>=6.11.0
+
+# Optional: CEO multi-provider bonus
+anthropic>=0.34.0
