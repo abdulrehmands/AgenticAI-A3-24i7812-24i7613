@@ -1,8 +1,4 @@
-# LaunchMind
-
-Multi-agent system for **FAST-NUCES Agentic AI — Group Assignment**. Autonomous LLM agents collaborate via a structured JSON **message bus** to turn a startup idea into a product spec, a GitHub landing-page PR, marketing email + Slack launch post, optional QA review comments, and a CEO final Slack summary.
-
-## Startup idea (2–3 sentences)
+## Startup idea
 
 **LinkedIn cold-outreach copilot** — a tool that auto-generates cold emails for sales teams using LinkedIn profile data (role, company, headline, and activity signals). Reps spend less time researching and drafting first-touch copy while keeping messages specific enough to feel one-to-one. The goal is higher reply rates without resorting to generic blast templates.
 
