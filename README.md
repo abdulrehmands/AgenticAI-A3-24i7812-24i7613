@@ -138,46 +138,38 @@ LRANGE launchmind:history 0 -1
 
 Each `LRANGE` entry is one JSON message. Per-agent queues are `launchmind:queue:ceo`, `launchmind:queue:product`, etc. To watch live **`PUBLISH`** traffic from the app, run **`SUBSCRIBE launchmind:bus`** in another `redis-cli` session while `main.py` runs.
 
-## Slack workspace and demo evidence
+## Slack workspace
 
-**Before submission, replace the bullets below with your group’s evidence.**
+Screenshots from workspace **TestingAgenticChatbot**, channel **`#launches`**.
 
-- **Workspace invite link:** In Slack: workspace name → **Invite people** → **Copy invite link**, or use **Settings & administration** → **Workspace settings** → invite link. Paste here:  
-  `https://join.slack.com/t/...` *(your link)*
-- **Screenshots (optional but recommended):** Capture `#launches` showing the Marketing Block Kit post and the CEO final summary, or attach images in your course submission if the README is exported as PDF.
+### Marketing launch posts (Block Kit)
+
+LaunchMind posts for new launches, including PR links and “Ready for review” status.
+
+![Slack #launches — Marketing Block Kit launch posts](assets/slack-launches-marketing-posts.png)
+
+### CEO final summary
+
+End-of-run CEO summary (idea, value proposition, engineering PR, marketing tagline, decision log excerpt).
+
+![Slack #launches — LaunchMind CEO final summary](assets/slack-launches-ceo-summary.png)
+
+## Email message
+
+Marketing email delivered via **SendGrid** (Gmail inbox). Subject and body are LLM-generated from the launch idea.
+
+![Gmail — LaunchMind marketing email (SendGrid)](assets/sendgrid-marketing-email.png)
 
 ## Engineer pull request
 
-**After a successful `main.py` run, paste the Engineer agent’s PR URL here.**
+- **Latest PR:** `https://github.com/abdulrehmands/launchmind-abdulrehmantalhasharif/pull/2`  
 
-- **Latest PR:** `https://github.com/<owner>/<repo>/pull/<number>`  
-  *(Copy from the `[Engineer] Opened PR:` line in the terminal or from the PR page on GitHub.)*
 
-## Demo video checklist (8–10 minutes, live run)
-
-1. Terminal visible while running `python main.py "..."`.
-2. CEO decomposition and messages printed / visible in logs.
-3. Product spec generation.
-4. GitHub: refresh showing **new PR** and branch.
-5. Email inbox showing the SendGrid message.
-6. Slack showing **Block Kit** launch post and CEO final summary.
-7. At least one **feedback loop** (CEO `revision_request` or QA fail → Engineer revision).
-8. No log playback — real-time run.
-
-**Windows console tip:** If you see `UnicodeEncodeError` / `charmap` when printing bus traces, either set `PYTHONUTF8=1` before running Python, or set `LAUNCHMIND_TRACE_BUS=0` in `.env` to disable `[BUS]` lines (see `scripts/message_bus.py`).
-
-Record the screen, upload (YouTube/Drive), and submit the link with the repo URL and **group member → agent ownership** on the course portal.
 
 ## Group member → agent ownership
 
-**Replace the example rows below** before submission — each member should own at least one agent.
 
 | Member | Agent(s) |
 |--------|----------|
-| *(your name)* | e.g. CEO |
-| *(your name)* | e.g. Engineer |
-| *(your name)* | e.g. Product, QA |
-
-## Academic integrity
-
-This project is for coursework. Use only API keys and accounts you are authorized to use; send marketing email only to addresses you control.
+| *Abdull Rehman* | CEO, Marketing & QA agent |
+| *Muhammad Talha Sharif* |  Engineer, Product & QA Agent |
